@@ -12,21 +12,18 @@ revert_wireshark.sh: Script de reversión (desinstalación). Deshace de forma se
 Instrucciones de Uso (Quick Start)
 1. Clonar el repositorio
 Abre una terminal y descarga los archivos a tu máquina local:
-git clone 
+git clone https://github.com/46u571N/coreemu-wireshark-integration.git
 cd coreemu-wireshark-integration
 
 2. Dar permisos de ejecución
 chmod +x setup_wireshark.sh revert_wireshark.sh
 
-4. Ejecute el script de configuración (NO UTILICE SUDO).
+3. Ejecute el script de configuración (⚠️ ADVERTENCIA CRÍTICA:NO UTILICE SUDO).
 ./setup_wireshark.sh
 
-5. Ejecutar la instalación (¡IMPORTANTE: NO USAR SUDO!)
-Para aplicar la configuración, ejecuta el script directamente como tu usuario normal:
-./setup_wireshark.sh
+NO ejecutes los scripts anteponiendo sudo (ej. sudo ./setup_wireshark.sh). El script está diseñado para leer la variable $USER y la ruta $HOME de tu usuario estándar para agregarlo al grupo de Wireshark y modificar tu configuración personal de CORE. Si lo ejecutas con sudo, la configuración fallará. El script pedirá la contraseña de administrador automáticamente cuando sea necesario.
+
 (Para revertir los cambios en el futuro, usa ./revert_wireshark.sh).
-
-⚠️ ADVERTENCIA CRÍTICA: NO ejecutes los scripts anteponiendo sudo (ej. sudo ./setup_wireshark.sh). El script está diseñado para leer la variable $USER y la ruta $HOME de tu usuario estándar para agregarlo al grupo de Wireshark y modificar tu configuración personal de CORE. Si lo ejecutas con sudo, la configuración fallará. El script pedirá la contraseña de administrador automáticamente cuando sea necesario.
 
 4. Reiniciar el sistema
 Al finalizar, el script te dará la opción de reiniciar el equipo. Este paso es obligatorio para que el sistema operativo reconozca tu entrada al grupo wireshark.
