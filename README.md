@@ -7,10 +7,10 @@ Este proyecto contiene scripts de automatización para habilitar la ejecución d
 
 ### 📁 Archivos Incluidos
 
-### *setup_wireshark.sh:*
+#### *setup_wireshark.sh:*
 Script de instalación. Se encarga de crear el grupo de captura, asignar los permisos necesarios a tu usuario, configurar el servidor gráfico para permitir conexiones de root e inyectar las opciones de Wireshark en el menú de la interfaz gráfica de CORE (config.yaml).
 
-### *revert_wireshark.sh:*
+#### *revert_wireshark.sh:*
 Script de reversión (desinstalación). Deshace de forma segura todos los cambios realizados por el script de instalación. Revoca permisos, elimina al usuario del grupo de captura y restaura el archivo de configuración original.
 
 ### 🚀 Instrucciones de Uso (Quick Start)
